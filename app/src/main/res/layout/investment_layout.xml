@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header_layout"/>
+
+    <ScrollView
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_background"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:background="@color/bg_main"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="资产总额"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+                <TextView
+                    android:background="@null"
+                    android:id="@+id/tv_name"
+                    android:layout_marginRight="@dimen/space_18"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+                <View
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:layout_marginRight="@dimen/space_15"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="@color/bg_main"
+                android:padding="@dimen/space_10"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:layout_centerInParent="true"
+                        android:id="@+id/consume_pie_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:paddingTop="@dimen/space_20"
+                            android:drawablePadding="@dimen/space_10"
+                            android:drawableLeft="@mipmap/group_18_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="待回收投资(元)"
+                            android:textColor="@color/text_drak_gray"
+                            android:textSize="@dimen/text_size_13"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/space_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text=""
+                            android:id="@+id/tv_wait_money"
+                            android:textColor="@color/text_drak_black"
+                            android:textSize="@dimen/text_size_15"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:drawablePadding="@dimen/space_10"
+                            android:drawableLeft="@mipmap/group_18_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="已回收投资(元)"
+                            android:textColor="@color/text_drak_gray"
+                            android:textSize="@dimen/text_size_13"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_has_money"
+                            android:paddingBottom="20dp"
+                            android:layout_marginTop="@dimen/space_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text=""
+                            android:textColor="@color/text_drak_black"
+                            android:textSize="@dimen/text_size_15"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:paddingLeft="@dimen/space_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计投资(元)"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+                <TextView
+                    android:id="@+id/edt_money_one"
+                    android:background="@null"
+                    android:layout_marginRight="@dimen/space_18"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:paddingLeft="@dimen/space_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计收益(元)"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+                <TextView
+                    android:background="@null"
+                    android:id="@+id/edt_money_two"
+                    android:layout_marginRight="@dimen/space_18"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:paddingLeft="@dimen/space_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已赚收益(元)"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+                <TextView
+                    android:id="@+id/edt_money_three"
+                    android:background="@null"
+                    android:layout_marginRight="@dimen/space_18"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:paddingLeft="@dimen/space_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="待收收益(元)"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+                <TextView
+                    android:id="@+id/edt_money_four"
+                    android:background="@null"
+                    android:layout_marginRight="@dimen/space_18"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_drak_black"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginRight="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_divider_1"
+                android:background="@color/text_gray"/>
+
+            <TextView
+                android:background="@color/bg_main"
+                android:paddingRight="@dimen/space_15"
+                android:paddingLeft="@dimen/space_15"
+                android:id="@+id/tv_exchange_info"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_black"
+                android:drawablePadding="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="所有投资"
+                android:drawableRight="@mipmap/group_11_2"
+                />
+
+            <View
+                android:layout_marginRight="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_divider_1"
+                android:background="@color/text_gray"/>
+
+            <TextView
+                android:id="@+id/tv_exchange_details"
+                android:background="@color/bg_main"
+                android:paddingRight="@dimen/space_15"
+                android:paddingLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_black"
+                android:drawablePadding="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="竞标中的投资"
+                android:drawableRight="@mipmap/group_11_2"
+                />
+
+            <View
+                android:layout_marginRight="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_divider_1"
+                android:background="@color/text_gray"/>
+
+
+            <TextView
+                android:id="@+id/tv_exchange_back"
+                android:background="@color/bg_main"
+                android:paddingRight="@dimen/space_15"
+                android:paddingLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_black"
+                android:drawablePadding="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="待回收的投资"
+                android:drawableRight="@mipmap/group_11_2"
+                />
+
+            <View
+                android:layout_marginRight="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_divider_1"
+                android:background="@color/text_gray"/>
+
+            <TextView
+                android:id="@+id/tv_has_exchange_back"
+                android:background="@color/bg_main"
+                android:paddingRight="@dimen/space_15"
+                android:paddingLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_black"
+                android:drawablePadding="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="已回收的投资"
+                android:drawableRight="@mipmap/group_11_2"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_10"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真实姓名"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:id="@+id/tv_name"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入真实姓名"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号码"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:inputType="number"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:maxLength="11"
+            android:id="@+id/edt_phone"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:id="@+id/edt_person_num"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入身份证号码"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:maxLength="18"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_10"
+        android:paddingTop="@dimen/space_10"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/bg_main"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传            "
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/iv_photo_front"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@mipmap/group_12_1"
+                />
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/iv_photo_back"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@mipmap/group_12_2"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家庭年收入"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:inputType="number"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请填写家庭年收入"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:id="@+id/edt_family_money"
+            android:maxLength="10"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家庭年消费"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:id="@+id/edt_family_money_use"
+            android:inputType="number"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请填写家庭年消费"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:maxLength="10"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+
+    <LinearLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否有抵押"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <TextView
+            android:background="@null"
+            android:id="@+id/tv_card"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请选择是否有抵押"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:drawableRight="@mipmap/group_11_2"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:id="@+id/ll_show"
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抵押描述"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入抵押描述"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:id="@+id/edt_mao_des"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="融资金额"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:inputType="number"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入融资金额"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:id="@+id/edt_need_money"
+            android:maxLength="10"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="融资期限"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <TextView
+            android:id="@+id/edt_pay_money_time"
+            android:inputType="number"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入融资期限"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            android:drawableRight="@mipmap/group_11_2"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="融资描述"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:id="@+id/edt_get_money_desc"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入融资描述"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="从事行业"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:id="@+id/edt_future"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入从事行业"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+
+    <TextView
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FE5A56"
+        android:text="提交"
+        android:gravity="center"
+        android:textColor="@color/bg_main"
+        android:textSize="@dimen/text_size_16"
+        android:id="@+id/tv_sub"
+        />
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

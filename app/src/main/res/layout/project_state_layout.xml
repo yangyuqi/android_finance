@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:paddingTop="@dimen/space_15"
+            android:paddingRight="@dimen/space_15"
+            android:paddingLeft="@dimen/space_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="更多介绍:"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_15"
+                />
+
+            <TextView
+                android:id="@+id/tv_introduce"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="更多介绍:"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_size_15"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="@dimen/space_15"
+            android:paddingRight="@dimen/space_15"
+            android:paddingLeft="@dimen/space_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="交易时间:"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_15"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="00：00～24:00"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_15"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="@dimen/space_15"
+            android:paddingRight="@dimen/space_15"
+            android:paddingLeft="@dimen/space_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="收益起计日:"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_15"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="“产品说明书”中列明的收益起计日，为购买日"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_15"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="@dimen/space_15"
+            android:paddingRight="@dimen/space_15"
+            android:paddingLeft="@dimen/space_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="交易时间:"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_15"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:text="T为产品到期日，T+2(工作日)为T日后第二个工作日"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_15"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

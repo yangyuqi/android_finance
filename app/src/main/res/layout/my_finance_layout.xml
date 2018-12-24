@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header_layout"/>
+
+    <LinearLayout
+        android:background="@color/bg_main"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_main"
+            app:tabTextColor="@color/text_black"
+            app:tabSelectedTextColor="@color/color_primary"
+            app:tabIndicatorColor="@color/color_primary"
+            app:tabTextAppearance="@style/text_white_15"
+            app:tabMode="fixed"
+            >
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人融资"
+                />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="企业融资"
+                android:visibility="gone"
+                />
+
+
+
+        </android.support.design.widget.TabLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/ll_one"
+            android:background="@color/bg_background"
+            android:paddingBottom="@dimen/space_7"
+            android:paddingTop="@dimen/space_7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="申请时间"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="申请金额(元)"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="状态"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_two"
+            android:background="@color/bg_background"
+            android:paddingBottom="@dimen/space_7"
+            android:paddingTop="@dimen/space_7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="申请时间"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="申请金额(元)"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="状态"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:id="@+id/ls_details"
+            ></ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

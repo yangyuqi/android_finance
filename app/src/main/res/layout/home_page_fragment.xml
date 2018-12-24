@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:background="@color/bg_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.jude.rollviewpager.RollPagerView
+                android:background="@mipmap/group_3_4"
+                android:id="@+id/roll_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            </com.jude.rollviewpager.RollPagerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/bg_main"
+                android:orientation="horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:drawablePadding="@dimen/space_2"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="政府参股"
+                        android:drawableLeft="@mipmap/group_3_1"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_13"
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:drawablePadding="@dimen/space_2"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="专业合规"
+                        android:drawableLeft="@mipmap/group_3_2"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_13"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:drawablePadding="@dimen/space_2"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="银行存管"
+                        android:drawableLeft="@mipmap/group_3_3"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_13"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:background="@color/bg_main"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_15"
+                    android:paddingLeft="@dimen/space_15"
+                    android:textColor="@color/text_black"
+                    android:text="热门推荐"
+                    android:paddingTop="@dimen/space_8"
+                    android:paddingBottom="@dimen/space_8"
+                    />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/space_15"
+                    android:text="更多 >"
+                    android:textColor="@color/text_drak_gray"
+                    android:paddingLeft="@dimen/space_15"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_marginRight="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_divider_1"
+                android:background="@color/text_gray"/>
+            <com.youzheng.zhejiang.financebooking.Widget.View.NoScrollListView
+                android:divider="@null"
+                android:background="@color/bg_main"
+                android:paddingRight="@dimen/space_10"
+                android:paddingLeft="@dimen/space_10"
+                android:id="@+id/ls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.youzheng.zhejiang.financebooking.Widget.View.NoScrollListView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

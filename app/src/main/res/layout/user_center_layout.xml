@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@mipmap/group_10_3"
+            >
+            <RelativeLayout
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/group_10_1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/bg_main"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:id="@+id/tv_name"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textSize="13sp"
+                    android:textColor="@color/text_org"
+                    android:paddingBottom="@dimen/space_3"
+                    android:paddingTop="@dimen/space_3"
+                    android:paddingRight="@dimen/space_8"
+                    android:paddingLeft="@dimen/space_8"
+                    android:text="普通会员"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/white_round_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+                <ImageView
+                    android:paddingLeft="@dimen/space_20"
+                    android:paddingRight="@dimen/space_10"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/group_10_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:layout_marginLeft="18dp"
+                android:text="账户总资产(元)"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/bg_main"
+                />
+
+            <TextView
+                android:id="@+id/tv_all_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/bg_main"
+                android:textSize="@dimen/text_size_30"
+                android:text=""
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/space_30"
+                >
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/text_size_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计收益(元)"
+                        android:textColor="@color/bg_main"
+                        />
+
+                    <TextView
+                        android:textColor="@color/bg_main"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/text_size_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="00"
+                        android:id="@+id/tv_has_money"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/text_size_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可用金额(元)"
+                        android:textColor="@color/bg_main"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_use_money"
+                        android:textColor="@color/bg_main"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/text_size_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="00"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/bg_main"
+                android:orientation="horizontal"
+                >
+                <RelativeLayout
+                    android:id="@+id/rl_recharge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                <TextView
+                    android:drawablePadding="@dimen/space_10"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="充值"
+                    android:drawableLeft="@mipmap/group_10_4"
+                    android:textColor="@color/text_org"
+                    android:textSize="@dimen/text_size_14"
+                    />
+            </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/space_divider_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/text_gray"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:layout_marginBottom="@dimen/space_15"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_withdraw"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:drawablePadding="@dimen/space_10"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="提现"
+                        android:drawableLeft="@mipmap/group_10_5"
+                        android:textColor="@color/text_org"
+                        android:textSize="@dimen/text_size_14"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_main"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_user_info"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="基本信息"
+                    android:drawableLeft="@mipmap/group_10_6"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_attention_info"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="实名认证"
+                    android:drawableLeft="@mipmap/group_10_7"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_card_manage"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="银行卡管理"
+                    android:drawableLeft="@mipmap/group_10_8"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_money_manage"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="资金管理"
+                    android:drawableLeft="@mipmap/group_10_9"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_investment"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="投资管理"
+                    android:drawableLeft="@mipmap/group_10_10"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_finance"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="我的融资"
+                    android:drawableLeft="@mipmap/group_10_11"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_account_safe"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="账户安全"
+                    android:drawableLeft="@mipmap/group_10_12"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_main"
+                android:paddingLeft="@dimen/space_15"
+                android:paddingRight="@dimen/space_15"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_invite"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="邀请注册"
+                    android:drawableLeft="@mipmap/group_10_13"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_help"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="帮助中心"
+                    android:drawableLeft="@mipmap/group_10_14"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_1"
+                    android:background="@color/text_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_set"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_black"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="设置"
+                    android:drawableLeft="@mipmap/group_10_15"
+                    android:drawableRight="@mipmap/group_11_2"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

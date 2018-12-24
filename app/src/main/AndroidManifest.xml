@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youzheng.zhejiang.financebooking">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name ="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".FinanceApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity android:name=".UI.finance.SplashActivity"
+            android:screenOrientation="portrait"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".UI.Home.FinaceProjectDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.UserCenterActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.AttentionInfoActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.BankCardMangerActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.BankCardDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.MoneyManageActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.ExChangeActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.ReChargeMoneyActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.WithdrawCashActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.InvestmentActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.AllInvestmentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UI.My.activity.InvestmentDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.FinancingActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.ApplayFinanceActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.PersonApplayActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.CoApplayActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.MyFinanceActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.MortgageFinanceActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.AccountSafeActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.DoLoginPasswordAndPhoneActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.OpenHandPassword"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.GesturePasswordActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.InviteActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.FindPasswordActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.AddBankCardActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.Home.H5Activity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.GestureForgetPassActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.SetAppActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.AboutAppActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.MyMortgageActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.My.activity.HelpCenterActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name="me.iwf.photopicker.PhotoPickerActivity"/>  //可以添加主题
+        <activity android:name="me.iwf.photopicker.PhotoPagerActivity" />
+    </application>
+
+</manifest>

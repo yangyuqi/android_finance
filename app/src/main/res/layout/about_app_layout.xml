@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header_layout"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_10"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/group_53_1"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投融宝3.2.1"
+                android:textColor="@color/text_drak_black"
+                android:textSize="@dimen/text_size_14"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:text="投融宝服务中心"
+                android:textColor="@color/text_drak_black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:text="地址 ：浙江省衢州市衢江区振兴路52号"
+                android:textColor="@color/text_drak_black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:text="电话 ：86-0573-2293377"
+                android:textColor="@color/text_drak_black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:text="传真 ：86-0573-2293377"
+                android:textColor="@color/text_drak_black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:text="网址 ：www.quezhoumr.cn"
+                android:textColor="@color/text_drak_black"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_15"
+            android:orientation="vertical"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:baselineAligned="false"
+                android:text="投融宝"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:text="Copyright ©2018-2023 All Rights Reserved."
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_12" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:background="@color/bg_main"
+    android:paddingTop="@dimen/space_10"
+    android:paddingBottom="@dimen/space_10"
+    android:paddingRight="@dimen/space_10"
+    android:paddingLeft="@dimen/space_15"
+    android:layout_width="match_parent"
+    android:layout_height="170dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:id="@+id/hor_sv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/space_30"
+                android:paddingTop="35dp"
+                android:background="@drawable/main_color_bank"
+                android:id="@+id/rl_view"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp">
+           <LinearLayout
+               android:id="@+id/ll"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
+          <ImageView
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:id="@+id/iv_icon"
+              />
+
+           <TextView
+               android:textColor="@color/white"
+               android:textSize="@dimen/text_size_17"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:id="@+id/tv_bank_name"
+               />
+
+        </LinearLayout>
+
+         <TextView
+             android:textColor="@color/white"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/ll"
+             android:layout_marginTop="@dimen/space_15"
+             android:textSize="@dimen/text_size_26"
+             android:id="@+id/tv_bank_num"
+             />
+            </RelativeLayout>
+            <!--<View-->
+            <!--android:id="@+id/view_test"-->
+            <!--android:background="@color/text_org"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="150dp" />-->
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/space_10"
+                android:id="@+id/main_right_drawer_layout"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/delete_right_bg"
+                >
+                <TextView
+                    android:textSize="@dimen/text_size_15"
+                    android:textColor="@color/bg_main"
+                    android:ems="1"
+                    android:id="@+id/tv_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="解除绑定" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    
+</HorizontalScrollView>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header_layout"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/space_10"
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品名称"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/tv_name"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品总额(元)"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/tv_card_money"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资金额(元)"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/tv_phone"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品周期(天)"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/tv_time"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_divider_1"
+    android:background="@color/text_gray"
+    android:layout_marginLeft="@dimen/space_15"
+    android:layout_marginRight="@dimen/space_15"/>
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预计年化收益率(%)"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/tv_card"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品状态"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:id="@+id/tv_account_safe"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单状态"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <EditText
+            android:id="@+id/tv_account_statue"
+            android:background="@null"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

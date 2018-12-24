@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/bg_main_color">
+
+        <TextView
+            android:id="@+id/textHeadTitle"
+            style="@style/main_head_title"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxWidth="180dp"
+            android:singleLine="true"
+            android:text="理财"
+            android:textColor="@color/bg_main"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/bg_main"
+        >
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:paddingRight="@dimen/space_12"
+                android:id="@+id/jiantou_bar_home"
+                style="@style/jiantou_footer_bar_radio"
+                android:drawableRight="@drawable/drawable_jiantou_select"
+                android:text="产品金额" />
+
+            <RadioButton
+                android:paddingRight="@dimen/space_12"
+                android:id="@+id/jiantou_bar_im"
+                style="@style/jiantou_footer_bar_radio"
+                android:drawableRight="@drawable/drawable_jiantou_select"
+                android:text="产品期限" />
+
+
+            <RadioButton
+                android:paddingRight="@dimen/space_12"
+                android:id="@+id/jiantou_footbar_user"
+                style="@style/jiantou_footer_bar_radio"
+                android:drawableRight="@drawable/drawable_jiantou_select"
+                android:text="产品状态" />
+
+            <RadioButton
+                android:paddingRight="@dimen/space_12"
+                android:id="@+id/jiantou_footbar_four"
+                style="@style/jiantou_footer_bar_radio"
+                android:drawableRight="@drawable/drawable_jiantou_select"
+                android:text="年化收益" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/bg_background"/>
+
+    <ListView
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_marginTop="@dimen/space_1"
+        android:background="@color/white"
+        android:paddingRight="@dimen/space_10"
+        android:paddingLeft="@dimen/space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:id="@+id/ls"
+        ></ListView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fl_content"
+            ></FrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

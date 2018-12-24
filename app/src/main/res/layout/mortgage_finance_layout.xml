@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header_layout"/>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_one"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请时间"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <TextView
+            android:background="@null"
+            android:id="@+id/tv_phone"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ggggg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请金额(元)"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <TextView
+            android:background="@null"
+            android:id="@+id/tv_time"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+    <RelativeLayout
+        android:background="@color/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还款金额(元)"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+        <TextView
+            android:background="@null"
+            android:id="@+id/tv_card"
+            android:layout_marginRight="@dimen/space_18"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_drak_black"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_1"
+        android:background="@color/text_gray"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"/>
+
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年化利率(%)"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <EditText
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ggggg"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                android:id="@+id/tv_pay_year"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付利息(%)"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                android:id="@+id/tv_pay_lixi"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否抵押"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_mort"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="状态"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_get_status"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:id="@+id/tv_des_mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="描述"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_two"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申请时间"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/edt_name"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ggggg"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抵押开始时间"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_di_start"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抵押结束时间"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_di_end"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抵押物"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_goods"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="描述"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_dec_do"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+        <RelativeLayout
+            android:background="@color/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抵押状态"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_di_status"
+                android:background="@null"
+                android:layout_marginRight="@dimen/space_18"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_15"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_drak_black"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_divider_1"
+            android:background="@color/text_gray"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
