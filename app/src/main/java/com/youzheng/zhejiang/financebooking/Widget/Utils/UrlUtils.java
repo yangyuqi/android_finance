@@ -56,4 +56,6 @@ public class UrlUtils {
     public static String CONFIRM_USER = BASE_URL+"member/invokeBankCard";
 
     public static String ADVERSTION_INFO = BASE_URL+"api/advertising/carousels";
+
+    public static String GET_INFO =BASE_URL+"data/app/start";
 }

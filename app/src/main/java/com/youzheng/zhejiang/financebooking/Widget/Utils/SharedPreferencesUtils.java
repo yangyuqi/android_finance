@@ -16,7 +16,7 @@ public class SharedPreferencesUtils {
     public static String userName = "userName" ;
     public static String invitaionCode = "invitaionCode" ;
     public static String isAuth = "isAuth";
-
+    public static String frist = "frist";
     public static String from = "from";
 
     public static String shoushi = "shoushi";

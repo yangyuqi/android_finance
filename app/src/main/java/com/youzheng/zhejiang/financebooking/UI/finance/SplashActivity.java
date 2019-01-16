@@ -1,35 +1,64 @@
 package com.youzheng.zhejiang.financebooking.UI.finance;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.telecom.TelecomManager;
+import android.telephony.TelephonyManager;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.WindowManager;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
 import com.squareup.okhttp.Request;
+import com.tbruyelle.rxpermissions.RxPermissions;
 import com.youzheng.zhejiang.financebooking.MainActivity;
 import com.youzheng.zhejiang.financebooking.Model.home.MVersionEntity;
 import com.youzheng.zhejiang.financebooking.R;
 import com.youzheng.zhejiang.financebooking.Thrid.network.OkHttpClientManager;
 import com.youzheng.zhejiang.financebooking.UI.BaseActivity;
 import com.youzheng.zhejiang.financebooking.Widget.Utils.PublicUtils;
+import com.youzheng.zhejiang.financebooking.Widget.Utils.SharedPreferencesUtils;
 import com.youzheng.zhejiang.financebooking.Widget.Utils.UrlUtils;
+import com.youzheng.zhejiang.financebooking.Widget.common.PublishUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
-public class SplashActivity extends BaseActivity {
+import rx.functions.Action1;
 
+public class SplashActivity extends BaseActivity  {
+
+    int widWidth ,widHeight;
+    public AMapLocationClient mlocationClient;
+    public AMapLocationClientOption mLocationOption = null;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_layout);
+        WindowManager manager = this.getWindowManager();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        manager.getDefaultDisplay().getMetrics(outMetrics);
+        widWidth = outMetrics.widthPixels;
+        widHeight = outMetrics.heightPixels;
 
-//        initData();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -39,6 +68,7 @@ public class SplashActivity extends BaseActivity {
             }
         },2000);
     }
+
 
     private void initData() {
         Map<String,Object> map = new HashMap<>();
@@ -104,4 +134,7 @@ public class SplashActivity extends BaseActivity {
         });
 
     }
+
+
+
 }
