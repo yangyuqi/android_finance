@@ -2,9 +2,9 @@ package com.youzheng.zhejiang.financebooking.Widget.Utils;
 
 public class UrlUtils {
 
-    public static String BASE_URL = "http://192.168.2.217:8088/financer/";
+//    public static String BASE_URL = "http://192.168.2.217:8088/financer/";
 
-//    public static String BASE_URL = "http://webapi.quzhoumr.com/financer/";
+    public static String BASE_URL = "http://webapi.quzhoumr.com/financer/";
     public static String PHOTO_ADD = "http://image.quzhoumr.com/";
     public static String BASEL_PHOTO = "http://webapi.quzhoumr.com/";
     public static String SEND_CODE = BASE_URL+"login/sendsmscode";
