@@ -17,6 +17,7 @@ import com.youzheng.zhejiang.financebooking.Model.user.MInvestmentActivityEntity
 import com.youzheng.zhejiang.financebooking.R;
 import com.youzheng.zhejiang.financebooking.Thrid.network.OkHttpClientManager;
 import com.youzheng.zhejiang.financebooking.UI.BaseFragment;
+import com.youzheng.zhejiang.financebooking.UI.My.activity.AccountOrConsultingActivity;
 import com.youzheng.zhejiang.financebooking.UI.My.activity.AccountSafeActivity;
 import com.youzheng.zhejiang.financebooking.UI.My.activity.AttentionInfoActivity;
 import com.youzheng.zhejiang.financebooking.UI.My.activity.BankCardMangerActivity;
@@ -42,7 +43,7 @@ import java.util.HashMap;
 public class UserCenterFragment extends BaseFragment {
 
     View view ;
-    TextView tv_user_info ,tv_all_money ,tv_use_money ,tv_has_money;
+    TextView tv_user_info ,tv_all_money ,tv_use_money ,tv_has_money,tv_account_trends,tv_consulting;
     TextView tv_name ;
     String accessToken ;
 
@@ -179,6 +180,23 @@ public class UserCenterFragment extends BaseFragment {
             }
         });
 
+        view.findViewById(R.id.tv_account_trends).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mContext,AccountOrConsultingActivity.class);
+                intent.putExtra("type",2);
+                startActivity(intent);
+            }
+        });
+
+        view.findViewById(R.id.tv_consulting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mContext,AccountOrConsultingActivity.class);
+                intent.putExtra("type",1);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initView() {
@@ -187,6 +205,8 @@ public class UserCenterFragment extends BaseFragment {
         tv_all_money = view.findViewById(R.id.tv_all_money);
         tv_use_money = view.findViewById(R.id.tv_use_money);
         tv_has_money = view.findViewById(R.id.tv_has_money);
+        tv_consulting=view.findViewById(R.id.tv_consulting);
+        tv_account_trends=view.findViewById(R.id.tv_account_trends);
         accessToken = (String) SharedPreferencesUtils.getParam(mContext,SharedPreferencesUtils.token,"");
     }
 

@@ -60,4 +60,6 @@ public class UrlUtils {
     public static String GET_INFO =BASE_URL+"data/app/start";
 
     public static String NEW_INVEST = BASE_URL+"/api/productManager/v1.2/wisChoWisInvest";
+
+    public static String ACCOUNT_OR_CONSULTING =BASE_URL+"api/advertising/v1.2/information";
 }
