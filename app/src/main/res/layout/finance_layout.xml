@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/bg_background"
     android:layout_width="match_parent"
@@ -28,6 +28,32 @@
             android:textSize="@dimen/text_size_17" />
 
     </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_main"
+        app:tabTextColor="@color/text_black"
+        app:tabSelectedTextColor="@color/color_primary"
+        app:tabIndicatorColor="@color/color_primary"
+        app:tabTextAppearance="@style/text_white_15"
+        app:tabMode="fixed"
+        >
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="优选智投"
+            />
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预售产品"
+            />
+
+    </android.support.design.widget.TabLayout>
+
 
     <RelativeLayout
         android:id="@+id/layoutFooter"

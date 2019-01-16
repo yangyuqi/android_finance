@@ -102,7 +102,7 @@
                     android:textSize="@dimen/text_size_15"
                     android:paddingLeft="@dimen/space_15"
                     android:textColor="@color/text_black"
-                    android:text="热门推荐"
+                    android:text="新手推荐"
                     android:paddingTop="@dimen/space_8"
                     android:paddingBottom="@dimen/space_8"
                     />

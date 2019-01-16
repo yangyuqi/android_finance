@@ -3,6 +3,7 @@ package com.youzheng.zhejiang.financebooking.UI.finance;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -44,6 +45,7 @@ public class FinanceFragment extends BaseFragment {
     View view ;
     RadioButton jiantou_footbar_user ,jiantou_bar_home,jiantou_footbar_four,jiantou_bar_im;
     protected FragmentManager fm;
+    TabLayout tab ;
 
     List<MHomeDetailsEntity> data = new ArrayList<>();
     CommonAdapter<MHomeDetailsEntity> adapter ;
@@ -160,6 +162,7 @@ public class FinanceFragment extends BaseFragment {
 
     private void initView(View view) {
         fm = getFragmentManager();
+        tab = view.findViewById(R.id.tab);
         jiantou_bar_im = view.findViewById(R.id.jiantou_bar_im);
         jiantou_bar_im.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -227,11 +230,37 @@ public class FinanceFragment extends BaseFragment {
             }
         };
         ls.setAdapter(adapter);
+        map.put("productType",2);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        addListener();
+    }
+
+    private void addListener() {
+        tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getPosition()==0){
+                    map.put("productType",2);
+                }else if (tab.getPosition()==1){
+                    map.put("productType",3);
+                }
+                initData(map);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 
     @Override
@@ -244,7 +273,7 @@ public class FinanceFragment extends BaseFragment {
 
     private void initData(Object o) {
         data.clear();
-        OkHttpClientManager.postAsynJson(gson.toJson(o), UrlUtils.CHO_INVEST, new OkHttpClientManager.StringCallback() {
+        OkHttpClientManager.postAsynJson(gson.toJson(o), UrlUtils.NEW_INVEST, new OkHttpClientManager.StringCallback() {
             @Override
             public void onFailure(Request request, IOException e) {
 

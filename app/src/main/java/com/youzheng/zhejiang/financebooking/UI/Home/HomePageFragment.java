@@ -134,7 +134,9 @@ public class HomePageFragment extends BaseFragment {
     }
 
     private void initData() {
-        OkHttpClientManager.postAsynJson(gson.toJson(new HashMap<>()), UrlUtils.HOME_INTRO, new OkHttpClientManager.StringCallback() {
+        Map<String,Object> map = new HashMap<>();
+        map.put("productType",1);
+        OkHttpClientManager.postAsynJson(gson.toJson(map), UrlUtils.NEW_INVEST, new OkHttpClientManager.StringCallback() {
             @Override
             public void onFailure(Request request, IOException e) {
 
