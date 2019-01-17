@@ -276,4 +276,18 @@
 
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_marginTop="@dimen/space_25"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginRight="@dimen/space_30"
+        android:background="@drawable/send_code_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="支付订单"
+        android:textColor="@color/bg_main"
+        android:textSize="@dimen/text_size_15"
+        android:gravity="center"
+        />
+
 </LinearLayout>

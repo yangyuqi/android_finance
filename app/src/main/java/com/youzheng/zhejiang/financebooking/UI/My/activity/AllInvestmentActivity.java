@@ -41,9 +41,13 @@ public class AllInvestmentActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_investment_layout);
-
         initView();
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         initData();
     }
 
@@ -100,19 +104,36 @@ public class AllInvestmentActivity extends BaseActivity {
 
         adapter = new CommonAdapter<MFinanceStatusDataEntity>(mContext,data,R.layout.exchange_ls_item) {
             @Override
-            public void convert(ViewHolder helper, final MFinanceStatusDataEntity item) {
+            public void convert(final ViewHolder helper, final MFinanceStatusDataEntity item) {
                 helper.setText(R.id.tv_name,item.getProductName());
                 helper.setText(R.id.tv_money,PublicUtils.formatToDouble(""+item.getProductAccount()));
                 helper.setText(R.id.tv_status,PublicUtils.formatToDouble(""+item.getOrderAccount()));
+
+                if (item.getOrderStatus()==1){ //待支付
+                    helper.getView(R.id.iv_book).setVisibility(View.GONE);
+                }else { //已支付
+                    helper.getView(R.id.iv_book).setVisibility(View.VISIBLE);
+                }
                 helper.getConvertView().setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(mContext,InvestmentDetailsActivity.class);
-                        intent.putExtra("data",item);
-                        startActivity(intent);
+                         if (helper.getView(R.id.iv_book).getVisibility()==View.VISIBLE){
+                             Intent intent = new Intent(mContext,InvestmentDetailsActivity.class);
+                             intent.putExtra("data",item);
+                             intent.putExtra("type",1);
+                             startActivity(intent);
+                         }else {
+                             Intent intent = new Intent(mContext,InvestmentDetailsActivity.class);
+                             intent.putExtra("data",item);
+                             intent.putExtra("type",2);
+                             startActivity(intent);
+                         }
+
+
                     }
                 });
-                helper.getView(R.id.iv_book).setVisibility(View.VISIBLE);
+
+
                 helper.getView(R.id.ll_book).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
