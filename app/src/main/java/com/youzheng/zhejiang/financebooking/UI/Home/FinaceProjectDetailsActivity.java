@@ -48,6 +48,7 @@ public class FinaceProjectDetailsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.finance_project_details_layout);
         initView();
+        initPosition(0);
         initData();
     }
 
@@ -82,7 +83,6 @@ public class FinaceProjectDetailsActivity extends BaseActivity {
                         tv_go_finance.setBackgroundResource(R.color.text_gray);
                         tv_go_finance.setEnabled(false);
                     }
-                    initPosition(0);
                     iiiiid = entity.getData().getId();
                     final String accessToken = (String) SharedPreferencesUtils.getParam(mContext,SharedPreferencesUtils.token,"");
                     tv_go_finance.setOnClickListener(new View.OnClickListener() {
