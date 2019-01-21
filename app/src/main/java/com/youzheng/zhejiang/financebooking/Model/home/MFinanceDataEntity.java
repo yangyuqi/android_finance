@@ -18,6 +18,15 @@ public class MFinanceDataEntity {
     private String productDesc ;
     private Integer peopleBuy ;
     private String productManual ;
+    private String productType ;
+
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
 
     public String getProductManual() {
         return productManual;

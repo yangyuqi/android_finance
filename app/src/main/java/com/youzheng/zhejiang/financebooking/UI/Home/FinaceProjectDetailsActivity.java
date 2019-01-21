@@ -89,7 +89,7 @@ public class FinaceProjectDetailsActivity extends BaseActivity {
                             @Override
                             public void onClick(View v) {
                                 if (!accessToken.equals("")) {
-                                    GoFinanceDialog dialog = new GoFinanceDialog(mContext, entity.getData().getId());
+                                    GoFinanceDialog dialog = new GoFinanceDialog(mContext, entity.getData().getId(),entity.getData().getProductType());
                                     dialog.show();
                                 }else {
                                     startActivity(new Intent(mContext, LoginActivity.class));

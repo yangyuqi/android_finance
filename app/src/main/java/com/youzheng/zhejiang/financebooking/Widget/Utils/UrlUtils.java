@@ -36,9 +36,14 @@ public class UrlUtils {
     public static String ADD_BANK_CARD = BASE_URL+"member/addBank";
     public static String TOUZI_RECODE = BASE_URL+"api/productManager/bidderRecord";
 
-    public static String AVAIL_MONEY = BASE_URL+"order/getProductAvailAccount";
-    public static String TOUZI_JIEKOU = BASE_URL+"order/investCommit";
-    public static String COMMINT_JIEKOU = BASE_URL+"order/placeAnOrder";
+    public static String AVAIL_MONEY1 = BASE_URL+"order/getProductAvailAccount";
+    public static String AVAIL_MONEY = BASE_URL+"order/v1.2/getProductAvailAccount";
+//    public static String TOUZI_JIEKOU = BASE_URL+"order/investCommit";
+    public static String TOUZI_JIEKOU = BASE_URL+"order/v1.2/investCommit";
+//    public static String COMMINT_JIEKOU = BASE_URL+"order/placeAnOrder";
+    public static String COMMINT_JIEKOU = BASE_URL+"order/v1.2/placeAnOrder";
+
+    public static String READY_COMMINT_JIEKOU = BASE_URL+"order/v1.2/advanceSaleProduct";
 
     public static String QUET_HAND_EXIST = BASE_URL+"api/gesture/details";
     public static String GESTURE_IS_OPEN = BASE_URL+"api/gesture/switch";

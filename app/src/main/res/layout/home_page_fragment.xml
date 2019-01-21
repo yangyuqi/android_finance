@@ -135,6 +135,55 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></com.youzheng.zhejiang.financebooking.Widget.View.NoScrollListView>
 
+
+            <RelativeLayout
+                android:background="@color/bg_main"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_15"
+                    android:paddingLeft="@dimen/space_15"
+                    android:textColor="@color/text_black"
+                    android:text="热门推荐"
+                    android:paddingTop="@dimen/space_8"
+                    android:paddingBottom="@dimen/space_8"
+                    />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/space_15"
+                    android:text="更多 >"
+                    android:textColor="@color/text_drak_gray"
+                    android:paddingLeft="@dimen/space_15"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_marginRight="@dimen/space_15"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_divider_1"
+                android:background="@color/text_gray"/>
+
+
+            <com.youzheng.zhejiang.financebooking.Widget.View.NoScrollListView
+                android:divider="@null"
+                android:background="@color/bg_main"
+                android:paddingRight="@dimen/space_10"
+                android:paddingLeft="@dimen/space_10"
+                android:id="@+id/ls_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.youzheng.zhejiang.financebooking.Widget.View.NoScrollListView>
+
         </LinearLayout>
 
     </ScrollView>

@@ -116,7 +116,7 @@ public class AllInvestmentActivity extends BaseActivity {
                 helper.getView(R.id.ll_book).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Uri uri = Uri.parse("http://192.168.2.217:8088/"+item.getContract());
+                        Uri uri = Uri.parse("http://192.168.2.217/"+item.getContract());
                         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                         startActivity(intent);
                     }

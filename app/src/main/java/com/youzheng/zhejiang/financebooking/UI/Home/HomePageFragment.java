@@ -39,12 +39,12 @@ public class HomePageFragment extends BaseFragment {
 
     RollPagerView roll_view ;
     View view ;
-    NoScrollListView ls ;
+    NoScrollListView ls ,ls_intro;
     CommonAdapter<MHomeDetailsEntity> adapter ;
     List<MHomeDetailsEntity> data = new ArrayList<>();
-
+    List<MHomeDetailsEntity> data_intro = new ArrayList<>();
     List<MAdHomeDataBean> beanList = new ArrayList<>();
-
+    CommonAdapter<MHomeDetailsEntity> adapter_intro ;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +61,8 @@ public class HomePageFragment extends BaseFragment {
     private void initView(View view) {
         ls = view.findViewById(R.id.ls);
         ls.setFocusable(false);
+        ls_intro = view.findViewById(R.id.ls_intro);
+        ls_intro.setFocusable(false);
         adapter = new CommonAdapter<MHomeDetailsEntity>(mContext,data,R.layout.home_page_ls_item) {
             @Override
             public void convert(ViewHolder helper, final MHomeDetailsEntity item) {
@@ -96,6 +98,41 @@ public class HomePageFragment extends BaseFragment {
         };
         ls.setAdapter(adapter);
 
+        adapter_intro = new CommonAdapter<MHomeDetailsEntity>(mContext,data_intro,R.layout.home_page_ls_item) {
+            @Override
+            public void convert(ViewHolder helper, final MHomeDetailsEntity item) {
+                helper.setText(R.id.tv_name,item.getProductName());
+                helper.setText(R.id.tv_productAccural,""+PublicUtils.formatToDouble(""+item.getProductAccural())+"%");
+                helper.setText(R.id.tv_productCycle,""+item.getProductCycle());
+                Double pay ;
+                if (item.getSubscribeMin()==null){
+                    pay = 0.00;
+                }else {
+                    pay = item.getSubscribeMin();
+                }
+                helper.setText(R.id.tv_can_use,"剩余可投"+PublicUtils.formatToDouble(""+item.getResidueAccount())+"，  "+PublicUtils.formatToDouble(""+pay)+"元起投");
+                ImageView imageView = helper.getView(R.id.iv_show);
+                if (item.getProductStatus()==4||item.getProductStatus()==5){
+                    imageView.setVisibility(View.VISIBLE);
+                }else {
+                    imageView.setVisibility(View.GONE);
+                }
+                ProgressBar seekBar = helper.getView(R.id.seek_bar);
+                int p =  (int)item.getBuyStatus();
+                seekBar.setProgress(p);
+
+                helper.getConvertView().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(mContext,FinaceProjectDetailsActivity.class) ;
+                        intent.putExtra("id",item.getId());
+                        startActivity(intent);
+                    }
+                });
+            }
+        };
+
+        ls_intro.setAdapter(adapter_intro);
         roll_view = view.findViewById(R.id.roll_view);
     }
 
@@ -156,5 +193,24 @@ public class HomePageFragment extends BaseFragment {
             }
         });
 
+       OkHttpClientManager.postAsynJson(gson.toJson(new HashMap<>()), UrlUtils.HOME_INTRO, new OkHttpClientManager.StringCallback() {
+           @Override
+           public void onFailure(Request request, IOException e) {
+
+           }
+
+           @Override
+           public void onResponse(String response) {
+               MHomeEntity entity = gson.fromJson(response,MHomeEntity.class);
+               if (entity.getRespCode().equals(PublicUtils.SUCCESS)){
+                   if (entity.getData().size()>0){
+                       data_intro.clear();
+                       data_intro.addAll(entity.getData());
+                       adapter_intro.setData(data_intro);
+                       adapter_intro.notifyDataSetChanged();
+                   }
+               }
+           }
+       });
     }
 }
