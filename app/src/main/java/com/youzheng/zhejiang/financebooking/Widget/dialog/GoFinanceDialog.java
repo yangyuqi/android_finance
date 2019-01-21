@@ -35,10 +35,12 @@ public class GoFinanceDialog extends Dialog {
     private MyCountDownTimer timer ;
     private TextView tv_confrim ;
     private EditText edt_code ,edt_money ;
-    public GoFinanceDialog(@NonNull Context context ,int id) {
+    String productType ;
+    public GoFinanceDialog(@NonNull Context context ,int id ,String type) {
         super(context, R.style.DeleteDialogStyle);
         this.context = context;
         this.productId = id ;
+        this.productType = type;
     }
 
 
@@ -102,7 +104,14 @@ public class GoFinanceDialog extends Dialog {
         if (!phone.equals("")) {
             map.put("phone",phone);
         }
-        OkHttpClientManager.postAsynJson(new Gson().toJson(map), UrlUtils.AVAIL_MONEY, new OkHttpClientManager.StringCallback() {
+        String u = null;
+        if (productType.equals("3")){
+            u = UrlUtils.AVAIL_MONEY;
+        }else {
+            u = UrlUtils.AVAIL_MONEY1;
+        }
+
+        OkHttpClientManager.postAsynJson(new Gson().toJson(map), u, new OkHttpClientManager.StringCallback() {
             @Override
             public void onFailure(Request request, IOException e) {
 
@@ -139,7 +148,15 @@ public class GoFinanceDialog extends Dialog {
                                         objectMap.put("code", edt_code.getText().toString());
                                         objectMap.put("productId", productId);
                                         objectMap.put("terminal", "Android");
-                                        OkHttpClientManager.postAsynJson(new Gson().toJson(objectMap), UrlUtils.TOUZI_JIEKOU, new OkHttpClientManager.StringCallback() {
+                                        objectMap.put("productType",productType);
+                                        String url ;
+                                        if (productType.equals("3")){
+                                            url = UrlUtils.READY_COMMINT_JIEKOU;
+                                        }else {
+                                            url =  UrlUtils.TOUZI_JIEKOU ;
+                                        }
+
+                                        OkHttpClientManager.postAsynJson(new Gson().toJson(objectMap), url, new OkHttpClientManager.StringCallback() {
                                             @Override
                                             public void onFailure(Request request, IOException e) {
 
@@ -161,6 +178,7 @@ public class GoFinanceDialog extends Dialog {
                                         _map.put("code", edt_code.getText().toString());
                                         _map.put("productId", productId);
                                         _map.put("terminal", "Android");
+                                        _map.put("productType",productType);
                                         OkHttpClientManager.postAsynJson(new Gson().toJson(_map), UrlUtils.COMMINT_JIEKOU, new OkHttpClientManager.StringCallback() {
                                             @Override
                                             public void onFailure(Request request, IOException e) {
