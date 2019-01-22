@@ -6,6 +6,15 @@ public class MAdHomeDataBean {
     private String businessType ;
     private int adType ;
     private String adTitle ;
+    private String adTypeinfo ;
+
+    public String getAdTypeinfo() {
+        return adTypeinfo;
+    }
+
+    public void setAdTypeinfo(String adTypeinfo) {
+        this.adTypeinfo = adTypeinfo;
+    }
 
     public String getAdImg() {
         return adImg;

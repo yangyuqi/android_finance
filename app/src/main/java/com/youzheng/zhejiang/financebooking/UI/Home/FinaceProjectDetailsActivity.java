@@ -146,7 +146,7 @@ public class FinaceProjectDetailsActivity extends BaseActivity {
 //                    Intent intent = new Intent(mContext,H5Activity.class);
 //                    intent.putExtra("url","http://image.ughen.com/"+productManual);
 //                    startActivity(intent);
-                    Uri uri = Uri.parse("http://image.ughen.com/"+productManual);
+                    Uri uri = Uri.parse("http://image.quzhoumr.com/"+productManual);
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }

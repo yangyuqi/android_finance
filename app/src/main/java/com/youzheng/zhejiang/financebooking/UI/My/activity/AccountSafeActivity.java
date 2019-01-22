@@ -53,20 +53,20 @@ public class AccountSafeActivity extends BaseActivity {
                 MInfoEntity infoEntity = gson.fromJson(response,MInfoEntity.class);
                 if (infoEntity.getRespCode().equals(PublicUtils.SUCCESS)){
                     try {
+
+                        ((TextView)findViewById(R.id.tv_phone)).setText(infoEntity.getMemberAuth().getmPhone());
+                        if (infoEntity.getAccount().getTraderPassword()!=null){
+                            ((TextView)findViewById(R.id.tv_exchange_password)).setText("已设置");
+                        }else {
+                            ((TextView)findViewById(R.id.tv_exchange_password)).setText("未设置");
+                        }
+                        queryHand(infoEntity.getAccount().getmId());
                         if (infoEntity.getMemberAuth().getmRealNameStatus() == 2) {
                             ((TextView) findViewById(R.id.tv_auth)).setText("已认证");
                         } else if (infoEntity.getMemberAuth().getmRealNameStatus() == 1) {
                             ((TextView) findViewById(R.id.tv_auth)).setText("未认证");
                         } else if (infoEntity.getMemberAuth().getmRealNameStatus() == 3) {
                             ((TextView) findViewById(R.id.tv_auth)).setText("认证失败");
-                            ((TextView)findViewById(R.id.tv_phone)).setText(infoEntity.getMemberAuth().getmPhone());
-                            if (infoEntity.getAccount().getTraderPassword()!=null){
-                                ((TextView)findViewById(R.id.tv_exchange_password)).setText("已设置");
-                            }else {
-                                ((TextView)findViewById(R.id.tv_exchange_password)).setText("未设置");
-                            }
-
-                            queryHand(infoEntity.getAccount().getmId());
                         }
                     }catch (Exception e){}
 

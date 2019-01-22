@@ -50,7 +50,7 @@ public class MyMortgageActivity extends BaseActivity {
         adapter = new CommonAdapter<MMyFinanceActivityDataEntity>(mContext,data,R.layout.exchange_ls_item) {
             @Override
             public void convert(ViewHolder helper, final MMyFinanceActivityDataEntity item) {
-                    helper.setText(R.id.tv_money, item.getFinancing_data());
+                    helper.setText(R.id.tv_money, item.getApplicationMortgageDesc());
                     helper.setText(R.id.tv_name,item.getApplicantDate());
                     try {
                         if (item.getAssets_status()==1){
@@ -83,7 +83,7 @@ public class MyMortgageActivity extends BaseActivity {
         map.put("pageIndex",pageIndex);
         map.put("pageSize",pageSize);
         map.put("type","1");
-        map.put("assetStatus","1");
+        map.put("assetStatus","");
         OkHttpClientManager.postAsynJson(gson.toJson(map), UrlUtils.ALL_INVERST, new OkHttpClientManager.StringCallback() {
             @Override
             public void onFailure(Request request, IOException e) {

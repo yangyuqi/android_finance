@@ -37,6 +37,7 @@
                 />
 
             <EditText
+                android:enabled="false"
                 android:background="@null"
                 android:id="@+id/tv_name"
                 android:layout_marginRight="@dimen/space_18"

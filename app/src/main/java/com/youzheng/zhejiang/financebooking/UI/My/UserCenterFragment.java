@@ -239,12 +239,12 @@ public class UserCenterFragment extends BaseFragment {
                         tv_name.setText(PublicUtils.phoneNum(infoEntity.getMemberAuth().getmBankphone()));
                         tv_all_money.setText(PublicUtils.formatToDouble("" + infoEntity.getAccount().getAccountAmount()));
                         tv_use_money.setText(PublicUtils.formatToDouble("" + infoEntity.getAccount().getAvailAmount()));
-                        tv_has_money.setText(PublicUtils.formatToDouble("" + infoEntity.getAccount().getFreezeAmount()));
+//                        tv_has_money.setText(PublicUtils.formatToDouble("" + infoEntity.getAccount().getFreezeAmount()));
                     } else if (infoEntity.getRespCode().equals(PublicUtils.RELOGIN)) {
                         tv_name.setText("");
                         tv_all_money.setText(PublicUtils.formatToDouble("" + 0.00));
                         tv_use_money.setText(PublicUtils.formatToDouble("" + 0.00));
-                        tv_has_money.setText(PublicUtils.formatToDouble("" + 0.00));
+//                        tv_has_money.setText(PublicUtils.formatToDouble("" + 0.00));
                         int shoushi = (int) SharedPreferencesUtils.getParam(mContext, SharedPreferencesUtils.shoushi, 0);
                         if (shoushi == 0 || shoushi == 2) {
                             startActivity(new Intent(mContext, LoginActivity.class));

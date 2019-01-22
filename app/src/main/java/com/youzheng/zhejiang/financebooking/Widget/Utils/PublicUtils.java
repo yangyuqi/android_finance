@@ -104,6 +104,8 @@ public class PublicUtils {
             return "token信息异常";
         }else if (code.equals("1000")){
             return "成功";
+        }else if (code.equals("1057")){
+            return "仅限新用户购买";
         }
 
         return "成功";

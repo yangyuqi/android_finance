@@ -39,7 +39,7 @@ public class AccountOrConsultingActivity extends BaseActivity implements View.On
     private RelativeLayout layout_header;
     private PullLoadMoreRecyclerView pr_list;
     private int page=1;
-    private int pageSize=10;
+    private int pageSize=30;
     private int type;
     private List<AccountOrConsultingEntity.DataBean> list=new ArrayList<>();
     private AccountOrConsultingAdapter adapter;

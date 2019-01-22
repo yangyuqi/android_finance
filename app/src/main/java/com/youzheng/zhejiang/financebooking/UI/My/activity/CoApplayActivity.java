@@ -245,9 +245,11 @@ public class CoApplayActivity extends BaseActivity {
             return;
         }
 
-        if (((EditText) findViewById(R.id.edt_future)).getText().toString().equals("")){
-            showToast("请填写抵押描述");
-            return;
+        if (applicantIsMortgage==1) {
+            if (((EditText) findViewById(R.id.edt_future)).getText().toString().equals("")) {
+                showToast("请填写抵押描述");
+                return;
+            }
         }
 
         if (((EditText) findViewById(R.id.edt_future_money)).getText().toString().equals("")){

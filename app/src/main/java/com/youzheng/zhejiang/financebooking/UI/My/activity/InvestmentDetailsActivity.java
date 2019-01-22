@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.okhttp.Request;
 import com.youzheng.zhejiang.financebooking.Model.MLoginEntity;
@@ -16,6 +17,7 @@ import com.youzheng.zhejiang.financebooking.Thrid.network.OkHttpClientManager;
 import com.youzheng.zhejiang.financebooking.UI.BaseActivity;
 import com.youzheng.zhejiang.financebooking.Widget.Utils.PublicUtils;
 import com.youzheng.zhejiang.financebooking.Widget.Utils.UrlUtils;
+import com.youzheng.zhejiang.financebooking.Widget.common.PublishUtils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -97,6 +99,8 @@ public class InvestmentDetailsActivity extends BaseActivity implements View.OnCl
                 MLoginEntity statusEntity = gson.fromJson(response,MLoginEntity.class);
                 if (statusEntity.getRespCode().equals(PublicUtils.SUCCESS)){
                         finish();
+                }else {
+                    Toast.makeText(mContext, PublicUtils.getMsg(statusEntity.getRespCode()),Toast.LENGTH_SHORT).show();
                 }
             }
         });

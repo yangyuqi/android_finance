@@ -129,7 +129,7 @@ public class DoLoginPasswordAndPhoneActivity extends BaseActivity {
                 timer.start();
                 Map<String,Object> map = new HashMap<>();
                 map.put("regPhone",((EditText)findViewById(R.id.tv_ex_phone)).getText().toString());
-                map.put("type",3);
+                map.put("type",4);
                 OkHttpClientManager.postAsynJson(gson.toJson(map), UrlUtils.SEND_CODE_ALL, new OkHttpClientManager.StringCallback() {
                     @Override
                     public void onFailure(Request request, IOException e) {

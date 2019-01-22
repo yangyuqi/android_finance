@@ -21,6 +21,7 @@ import com.youzheng.zhejiang.financebooking.Widget.Utils.PublicUtils;
 import com.youzheng.zhejiang.financebooking.Widget.Utils.SharedPreferencesUtils;
 import com.youzheng.zhejiang.financebooking.Widget.Utils.UrlUtils;
 import com.youzheng.zhejiang.financebooking.Widget.View.MyCountDownTimer;
+import com.youzheng.zhejiang.financebooking.Widget.common.PublishUtils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -92,7 +93,9 @@ public class GoFinanceDialog extends Dialog {
             @Override
             public void onResponse(String response) {
                 MLoginEntity entity = new Gson().fromJson(response, MLoginEntity.class);
-                Toast.makeText(context,PublicUtils.getMsg(entity.getRespCode()),Toast.LENGTH_SHORT).show();
+                if (!entity.getRespCode().equals("1000")) {
+                    Toast.makeText(context, PublicUtils.getMsg(entity.getRespCode()), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -165,14 +168,17 @@ public class GoFinanceDialog extends Dialog {
                                             @Override
                                             public void onResponse(String response) {
                                                 MLoginEntity entity = new Gson().fromJson(response, MLoginEntity.class);
-                                                Toast.makeText(context, PublicUtils.getMsg(entity.getRespCode()), Toast.LENGTH_SHORT).show();
                                                 if (entity.getRespCode().equals(PublicUtils.SUCCESS)) {
                                                     dismiss();
+                                                }else {
+                                                    Toast.makeText(context, PublicUtils.getMsg(entity.getRespCode()), Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
                                     } else {
-                                        Toast.makeText(context, "由于您的账户余额不足,无法完成支付操作 ! 如确认下单 ,请于24小时内充值完成支付 !", Toast.LENGTH_SHORT).show();
+                                        if (!productType.equals("1")) {
+                                            Toast.makeText(context, "由于您的账户余额不足,无法完成支付操作 ! 如确认下单 ,请于24小时内充值完成支付 !", Toast.LENGTH_SHORT).show();
+                                        }
                                         Map<String, Object> _map = new HashMap<>();
                                         _map.put("investMoney", edt_money.getText().toString());
                                         _map.put("code", edt_code.getText().toString());
@@ -188,15 +194,16 @@ public class GoFinanceDialog extends Dialog {
                                             @Override
                                             public void onResponse(String response) {
                                                 MLoginEntity entity = new Gson().fromJson(response, MLoginEntity.class);
-                                                Toast.makeText(context, PublicUtils.getMsg(entity.getRespCode()), Toast.LENGTH_SHORT).show();
                                                 if (entity.getRespCode().equals(PublicUtils.SUCCESS)) {
                                                     dismiss();
+                                                }else {
+                                                    Toast.makeText(context, PublicUtils.getMsg(entity.getRespCode()), Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
                                     }
                                 } else {
-                                    Toast.makeText(context, "项目起投:" + PublicUtils.formatToDouble("" + minInvest) + "元 , " + "最大投资金额 :" + PublicUtils.formatToDouble("" + maxInvest) + "元", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, "项目起投:" + PublicUtils.formatToDouble("" + minInvest) + "元 , " + "最大投资金额 :" + PublicUtils.formatToDouble("" + maxInvest) + "元,"+"最小投资金额 :"+PublicUtils.formatToDouble(""+minInvest)+"元", Toast.LENGTH_SHORT).show();
                                 }
                             }else {
                                 Toast.makeText(context, "请先实名认证后再投资下单", Toast.LENGTH_SHORT).show();

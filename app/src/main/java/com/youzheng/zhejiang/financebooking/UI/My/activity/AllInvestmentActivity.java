@@ -80,10 +80,10 @@ public class AllInvestmentActivity extends BaseActivity {
         type = getIntent().getStringExtra("type");
         if (type.equals("2")){
             tabLayout.getTabAt(2).select();
-            financingStatus = 3 ;
+            financingStatus = 4 ;
         }else if (type.equals("1")){
             tabLayout.getTabAt(1).select();
-            financingStatus = 2 ;
+            financingStatus = 3 ;
         }else if (type.equals("0")){
             tabLayout.getTabAt(0).select();
             financingStatus = null ;
@@ -137,7 +137,7 @@ public class AllInvestmentActivity extends BaseActivity {
                 helper.getView(R.id.ll_book).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Uri uri = Uri.parse("http://192.168.2.217/"+item.getContract());
+                        Uri uri = Uri.parse("http://image.quzhoumr.com/"+item.getContract());
                         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                         startActivity(intent);
                     }
@@ -152,9 +152,9 @@ public class AllInvestmentActivity extends BaseActivity {
                 if (tab.getPosition()==0){
                     financingStatus = null ;
                 }else if (tab.getPosition()==1){
-                    financingStatus = 2 ;
-                }else if (tab.getPosition()==2){
                     financingStatus = 3 ;
+                }else if (tab.getPosition()==2){
+                    financingStatus = 4 ;
                 }else if (tab.getPosition()==3){
                     financingStatus = 5 ;
                 }

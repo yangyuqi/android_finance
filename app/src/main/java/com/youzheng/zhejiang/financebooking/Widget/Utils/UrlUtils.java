@@ -69,4 +69,7 @@ public class UrlUtils {
     public static String ACCOUNT_OR_CONSULTING =BASE_URL+"api/advertising/v1.2/information";
 
     public static String PAY_ORDER =BASE_URL+"order/v1.2/pay";
+
+
+    public static String AD_DETAOLS = BASE_URL+"api/advertising/v1.2/inforDetails";
 }
