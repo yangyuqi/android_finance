@@ -2,6 +2,7 @@ package com.youzheng.zhejiang.financebooking.UI.My.activity;
 
 
 import android.net.http.SslError;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.SslErrorHandler;
@@ -34,7 +35,7 @@ public class ConsultingDetailActivity extends BaseActivity implements View.OnCli
     private RelativeLayout layout_header;
     private WebView web_detail;
     //字体颜色设为白色, “p”标签内的字体颜色  “*”定义了字体大小以及行高；
-    public final static String CSS_STYLE ="<style>* {font-size:40px;line-height:50px;}p {color:#00000000;}</style>";
+    public final static String CSS_STYLE ="<style>* {font-size:40px;line-height:40px;}</style>";
 
     private String web_html;
     private String title;
@@ -52,7 +53,7 @@ public class ConsultingDetailActivity extends BaseActivity implements View.OnCli
 
     private void initData() {
         String html = "<html>" + web_html + "</html>";
-        web_detail.loadDataWithBaseURL(null, CSS_STYLE + getNewContent(html), "text/html", "utf-8", null);
+        web_detail.loadDataWithBaseURL(null,CSS_STYLE+getNewContent(html), "text/html", "utf-8", null);
     }
 
     private void initView() {
@@ -75,12 +76,17 @@ public class ConsultingDetailActivity extends BaseActivity implements View.OnCli
         //优先使用缓存:
 //        wv_introduce.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         //设置自适应屏幕，两者合用
+        webSettings.setBlockNetworkImage(false);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            //允许混合（http，https）
+            webSettings.setMixedContentMode((WebSettings.MIXED_CONTENT_ALWAYS_ALLOW));
+        }
         webSettings.setUseWideViewPort(true); //将图片调整到适合webview的大小
         webSettings.setLoadWithOverviewMode(true); // 缩放至屏幕的大小
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);  //就是这句
         //缩放操作
-        webSettings.setSupportZoom(false); //支持缩放，默认为true。是下面那个的前提。
-        webSettings.setBuiltInZoomControls(false); //设置内置的缩放控件。若为false，则该WebView不可缩放
+        webSettings.setSupportZoom(true); //支持缩放，默认为true。是下面那个的前提。
+        webSettings.setBuiltInZoomControls(true); //设置内置的缩放控件。若为false，则该WebView不可缩放
         webSettings.setDisplayZoomControls(false); //隐藏原生的缩放控件
 
         //其他细节操作
